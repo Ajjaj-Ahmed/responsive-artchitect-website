@@ -8,19 +8,32 @@
 /* shared style */
 body{
   font-family: "Work Sans", sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main >section{
+  margin-top: 120px;
 }
 .disply-flex{
   display: flex;
 }
-
-/* navbar */
-.navbar{
-  max-width: 1440px;
-  border: 2px solid red;
+.btn-primary{
+  color: white;
+  border: none;
+  border-radius: 8px;
+  background: rgb(255, 144, 14);
+  padding: 1.25rem 1.0rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.navbar,.team{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+}
+/* navbar */
+.head-section{
+  background: rgba(255, 144, 14, 0.1);
 }
 .brand{
   font-weight: 700;
@@ -34,4 +47,68 @@ body{
 }
 .nav-link{
   text-decoration: none;
+}
+
+/* Banner related style */
+.banner-content{
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.banner-title{
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.banner-description{
+  margin-bottom: 2rem;
+}
+.banner-image{
+  width: 100%;
+}
+
+/* Team section */
+.team{
+  gap: 4.5rem;
+}
+.team-img-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.5rem;
+}
+.team-content{
+  max-width: 530px;
+}
+.team-title{
+  font-weight: 500;
+  font-size: 2.8rem;
+  color: rgb(114, 114, 114);
+  margin-bottom: 1.5rem;
+}
+.team-our{
+  font-weight: 700;
+  color: rgb(19, 19, 19);
+}
+.team-feature{
+  color: rgb(255, 144, 14);
+}
+.team-description{
+  text-align: justify;
+  color: rgb(114, 114, 114);
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width:576px) {
+  .navbar,.nav-links,.team{
+    flex-direction: column;
+  }
+  .team-img-container{
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+  }
+  .team-content{
+    text-align: center;
+    padding: 10px;
+  }
 }
